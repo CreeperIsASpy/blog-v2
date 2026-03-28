@@ -47,9 +47,9 @@ function formatWordCount(count: number): string {
 
 <div
   id="brand"
-  class="color-grey-0 w-full px-20 pt-12 text-center min-h-40 flex flex-col items-center justify-center"
+  class="color-[var(--header-text-color)] w-full px-20 pt-12 text-center min-h-40 flex flex-col items-center justify-center"
 >
-  <div class="pjax flex flex-col w-full items-center justify-center">
+  <div class="bg-[var(--grey-1)]/60 rounded-[38px] p-[10px] backdrop-blur-[10px] pjax flex flex-col w-full items-center justify-center">
     {
       logo && (
         <div class="artboard text-6xl leading-1.2 font-bold mb-2.5">{logo}</div>
@@ -58,7 +58,7 @@ function formatWordCount(count: number): string {
 
     {
       displayTitle && (
-        <h1 class="letter-space-2  color-grey-0 text-5xl leading-tight tracking-wider font-600">
+        <h1 class="letter-space-2 text-5xl leading-tight tracking-wider font-600">
           {displayTitle}
         </h1>
       )
@@ -66,7 +66,7 @@ function formatWordCount(count: number): string {
 
     {
       shouldShowSubtitle && (
-        <p class="text-2xl color-grey-0 m-0 mt-2.5 flex gap-2.5">
+        <p class="text-2xl m-0 mt-2.5 flex gap-2.5">
           <span class="flex items-center">=</span>
           <span>{subtitle}</span>
           <span class="flex items-center">=</span>
@@ -146,7 +146,7 @@ function formatWordCount(count: number): string {
   }
 
   #brand.affix {
-    z-index: var(--z-base);
+    z-index: 0;
   }
 
   .pjax {

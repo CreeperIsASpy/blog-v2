@@ -39,7 +39,7 @@ import PlayformInline from "@playform/inline";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://preview.astro.kaitaku.xyz",
+  site: "https://blog.creeperspy.top",
   trailingSlash: "always",
   build: {
     format: "directory",
