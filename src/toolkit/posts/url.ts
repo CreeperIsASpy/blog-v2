@@ -1,0 +1,51 @@
+function trimSlashes(input: string): string {
+  return input.replace(/^\/+|\/+$/g, "");
+}
+
+function removeMarkdownExtension(input: string): string {
+  return input.replace(/\.mdx?$/i, "");
+}
+
+function encodePathSegments(input: string): string {
+  return input
+    .split("/")
+    .filter(Boolean)
+    .map((segment) => encodeURIComponent(segment))
+    .join("/");
+}
+
+export function toTagSlug(name: string): string {
+  const normalized = String(name || "")
+    .trim()
+    .toLowerCase();
+
+  if (!normalized) {
+    return "";
+  }
+
+  return normalized
+    .replace(/[\\/]+/g, "-")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+export function toTagHref(name: string): string {
+  const slug = toTagSlug(name);
+  return slug ? `/tags/${encodeURIComponent(slug)}/` : "/tags/";
+}
+
+export function toCategoryHref(name: string): string {
+  const normalized = String(name || "").trim();
+  return normalized ? `/categories/${encodeURIComponent(normalized)}/` : "/categories/";
+}
+
+export function toPostHref(idOrSlug: string): string {
+  const normalized = trimSlashes(removeMarkdownExtension(String(idOrSlug || "").trim()));
+
+  if (!normalized) {
+    return "/posts/";
+  }
+
+  return `/posts/${encodePathSegments(normalized)}/`;
+}
