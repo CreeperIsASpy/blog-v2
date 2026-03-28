@@ -1,6 +1,6 @@
 {
   "framework": "astro",
-  "installCommand": "rm -rf node_modules bun.lockb && bun install --frozen-lockfile",
+  "installCommand": "rm -rf node_modules bun.lock && bun install",
   "buildCommand": "bun run build",
   "outputDirectory": "dist",
   "headers": [
