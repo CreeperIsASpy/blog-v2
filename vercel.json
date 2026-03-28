@@ -1,6 +1,6 @@
 {
   "framework": "astro",
-  "installCommand": "bun install && bun install @astrojs/compiler-rs",
+  "installCommand": "rm -rf node_modules bun.lockb && bun install --frozen-lockfile",
   "buildCommand": "bun run build",
   "outputDirectory": "dist",
   "headers": [
