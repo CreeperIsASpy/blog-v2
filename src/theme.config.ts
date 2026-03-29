@@ -2,7 +2,7 @@
 import { defineConfig } from "./toolkit/themeConfig";
 
 export default defineConfig({
-  siteName: "ShokaX",
+  siteName: "仿生猫的小窝",
   locale: "zh-CN", // 网站语言: "zh-CN" | "en"
   nav: [
     {
@@ -107,8 +107,7 @@ export default defineConfig({
   comments: {
     enable: false,
     waline: {
-      serverURL: "",
-      // 推荐与站点语言保持一致
+      serverURL: "https://waline.creeperspy.top",
       lang: "zh-CN",
     },
   },
@@ -153,8 +152,8 @@ export default defineConfig({
     selectedCategories: [{ name: "笔记" }, { name: "前端" }],
     pageSize: 5,
     title: {
-      behavior: "default",
-      customTitle: "",
+      behavior: "custom",
+      customTitle: "仿生猫的小窝！",
     },
   },
   layout: {
