@@ -105,7 +105,7 @@ export default defineConfig({
     recentCommentsLimit: 10,
   },
   comments: {
-    enable: false,
+    enable: true,
     waline: {
       serverURL: "https://waline.creeperspy.top",
       lang: "zh-CN",
