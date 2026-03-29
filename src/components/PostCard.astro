@@ -13,36 +13,22 @@ const postUrl = `/posts/${post.id}/`;
 const publicDescription =
   post.data.description || post.body?.substring(0, 300) || "";
 const lastCategory = post.data.categories?.[post.data.categories.length - 1];
-
-const isStringSrc = typeof post.data.cover === "string";
-const imgSrc = isStringSrc ? (post.data.cover as string) : undefined;
-const assetSrc = !isStringSrc ? (post.data.cover as ImageMetadata) : undefined;
-
 ---
 
 <article class="post-card">
   <div class="cover">
-    {imgSrc ? (
-      <img
-        src={imgSrc}
-        alt={post.data.title}
-        loading="lazy"
-        decoding="async"
-        class="cover-image"
-        width=38
-        height=38
-      />
-    ) : (
-      <Image
-        src={assetSrc!}
-        alt={post.data.title}
-        loading="lazy"
-        decoding="async"
-        class="cover-image"
-        width=38
-        height=38
-      />
-    )}
+    {
+      post.data.cover && (
+        <Image
+          layout="constrained"
+          src={post.data.cover}
+          alt={post.data.title}
+          loading="lazy"
+          decoding="async"
+          class="cover-image"
+        />
+      )
+    }
     <div class="cover-overlay"></div>
   </div>
 
