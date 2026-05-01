@@ -6,6 +6,8 @@ categories: [编程, PCL]
 cover: "../../public/images/pcl-reflect-1.png"
 ---
 
+> 由于 2026 年 4 月下旬发布的快照版 2.12.7.2 使用的“土豆码”验证换用了最新的 ECDSA 算法进行加密，本文所述方法已完全失效。
+
 ## 反编译
 
 ~~由于太菜~~我没能知道 PCL 快照版加的什么壳，试着使用了 .NET Reactor Slayer，成功脱去了大部分内容。
