@@ -1,6 +1,6 @@
 ---
 title: 【教程向】如何拥有自己的一只小一涵？
-date: 2026-03-28 13:27:38
+date: 2026-06-7 15:25:10
 tags:
   - 技术
   - 教程
@@ -36,7 +36,7 @@ cover: ../../public/images/astrbot-2.png
 1. 按照[这个教程章节](https://docs.astrbot.app/deploy/astrbot/docker.html#%E9%80%9A%E8%BF%87-docker-compose-%E9%83%A8%E7%BD%B2)中的“只部署 AstrBot（通用方式）”来安装。
 > 不要自作聪明的使用其他方式，否则可能导致意外情况（例如部署了两个 NapCat 导致冲突，亦或是出现其他诡异 Bug），概不负责。
 2. 执行`sudo docker ps | grep astrbot`，然后复制第一列长 12 字符的容器 ID。
-3. 输入`sudo docker logs ab552f7ef286`找到初始密码（应该挺好找的），复制。
+3. 输入`sudo docker logs <容器 ID>`找到初始密码（应该挺好找的），复制。
 4. 访问<http://localhost:6185>，使用初始密码（账户名是 astrbot）登录后，立刻设置你自己的账户。
 5. 进入 WebUI 界面。
 ## 配置模型提供商
