@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "astrbot.md",
+                "file": "qq-cqcode.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "astrbot"
+              "title": "qq-cqcode"
             }
           }
         ]
@@ -185,8 +185,14 @@
   },
   "active": "4ccdf19a1ab57f22",
   "lastOpenFiles": [
-    "home/creeperisaspy/Programming/blog-v2/public/images/astrbot-1.png.md",
+    "self-host-cloud-crazy.md",
+    "qq-cqcode.md",
     "astrbot.md",
+    "jikelan.md",
+    "wechat-font.md",
+    "trying-kubuntu.md",
+    "my-thoughts-on-the-link-feature-being-shut-down.md",
+    "home/creeperisaspy/Programming/blog-v2/public/images/astrbot-1.png.md",
     "home/creeperisaspy/Programming/blog-v2/public/images",
     "home/creeperisaspy/Programming/blog-v2/public",
     "home/creeperisaspy/Programming/blog-v2",
