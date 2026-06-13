@@ -216,8 +216,6 @@ export default defineConfig({
         avatar: "https://gldym.github.io/img/icon.png",
         color: "var(--color-blue)"
       },
-      {
-
     ],
   },
   copyright: {
