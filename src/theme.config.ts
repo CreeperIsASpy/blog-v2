@@ -213,7 +213,7 @@ export default defineConfig({
         title: "Polaris Light 的小站",
         desc: "猫猫很可爱",
         author: "北辰星光 @ QQ",
-        avatar: "https://gldym.github.io/img/icon.png"
+        avatar: "https://gldym.github.io/img/icon.png",
         color: "var(--color-blue)"
       },
       {
