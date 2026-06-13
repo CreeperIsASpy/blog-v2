@@ -208,6 +208,16 @@ export default defineConfig({
         avatar: "https://avatars.githubusercontent.com/u/176894598?s=200&v=4",
         color: "var(--color-green)",
       },
+      {
+        url: "https://gldym.github.io",
+        title: "Polaris Light 的小站",
+        desc: "猫猫很可爱",
+        author: "北辰星光 @ QQ",
+        avatar: "https://gldym.github.io/img/icon.png"
+        color: "var(--color-blue)"
+      },
+      {
+
     ],
   },
   copyright: {
