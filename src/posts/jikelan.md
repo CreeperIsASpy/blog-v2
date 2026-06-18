@@ -1,9 +1,12 @@
 ---
-title: 【PCL】极客蓝
+title: 【PCL】极客蓝(base64 | url-decode %E6E88%91%E7%88%B1%E6%9B%B9%E4%B8%80%E6%B6%85)
 date: 2026-01-30 16:55:00
+description: base64 decode | url-decode %E6%88%91%E7%88%B1%E6%9B%B9%E4%B8%80%E6%B6%B5
 tags: [PCL, 解密游戏]
 cover: ../../public/images/jikelan-book.PNG
 categories: [编程, PCL]
+encrypted: true
+password: 5oiR54ix5pu55LiA5ra1Cg==
 ---
 
 初始线索：设置 -> 个性化 -> 主题中找到应为极客蓝的单选框，右键得到提示。
