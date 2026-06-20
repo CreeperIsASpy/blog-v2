@@ -1,12 +1,9 @@
 ---
-title: 【PCL】极客蓝(base64 | url-decode %E6E88%91%E7%88%B1%E6%9B%B9%E4%B8%80%E6%B6%85)
+title: 【PCL】极客蓝
 date: 2026-01-30 16:55:00
-description: base64 decode | url-decode %E6%88%91%E7%88%B1%E6%9B%B9%E4%B8%80%E6%B6%B5
 tags: [PCL, 解密游戏]
 cover: ../../public/images/jikelan-book.PNG
 categories: [编程, PCL]
-encrypted: true
-password: 5oiR54ix5pu55LiA5ra1Cg==
 ---
 
 初始线索：设置 -> 个性化 -> 主题中找到应为极客蓝的单选框，右键得到提示。
@@ -212,7 +209,7 @@ password: 5oiR54ix5pu55LiA5ra1Cg==
 
 找到与 OBSIDIAN 对应的行里的蓝点坐标：O6、 B5、S9、I80、D10、N35。
 
-组合行号的数字，得到密群群号：`659801035`
+组合行号的数字，得到密群群号：【根据龙猫要求，已隐藏】
 
 第五句——别高兴的太早:laughing:，密群是有密码滴。
 
@@ -226,9 +223,9 @@ password: 5oiR54ix5pu55LiA5ra1Cg==
 00110001/00111001/00110100/00110101/00110011
 ```
 
-直接全部暴力合并转换为 hex/bin，然后 .decode('ascii')，得到`19453`。
+直接全部暴力合并转换为 hex/bin，然后 .decode('ascii')，得到【根据龙猫要求，已隐藏】。
 
-因此最终密群群号为`659801035`，密码为`19453`。
+因此最终密群群号为【根据龙猫要求，已隐藏】，密码为【根据龙猫要求，已隐藏】。
 
 至此所有内容完成。
 
