@@ -1,0 +1,139 @@
+---
+title: 【KUbuntu】全面的体验
+date: 2026-06-22 20:57:38
+tags: [操作系统, 技术, Linux体验]
+categories: [手记, OS]
+cover: ../../public/images/trying-kubuntu-1.png
+---
+
+## 为什么选择 KUbuntu
+
+KUbuntu 是我第一个选择的 Linux 发行版。出人意料地，这也可能是我选择的最后一个 Linux 发行版。
+从桌面用户占比来说， KUbuntu 算是一个相对小众的发行版。截止到现在，[DistroWatch](https://distrowatch.com/) 上 KUbuntu 的排名（Last 12 months）是第 40 名。而在[Steam 软硬件调查](https://store.steampowered.com/hwsurvey/Steam-Hardware-Software-Survey-Welcome-to-Steam?platform=linux)中甚至根本排不上号。
+但是，KUbuntu 拥有大多桌面 Linux 系统所不具备的特点：日用性。
+据我观察，目前在 Linux 社区内的使用，能（同时）反馈出*舒适*和*易用*的，无非以下系统：
+- Ubuntu（及其衍生发行版）
+- Fedora
+而从桌面端来看，能反馈出*美观*与*简洁*，那么 KDE 就是唯一的选择。
+因此，结合 Ubuntu 和 KDE，选择 KUbuntu 就是最自然不过的选择。
+你问我为什么不用 Fedora？因为网上相关的资源毕竟还是少了点。目前来说，`apt`为基础，`flatpak`为补充，基于 Debian 的系统已经可以做到兼容大多数 Linux（甚至是 Windows）软件。
+
+## 我安装的软件
+- 浏览器：Google Chrome
+>你问我为什么不用 Firefox？因为我习惯用 Chrome 了。
+- 音乐播放器：[SPlayer](https://github.com/SPlayer-Dev/SPlayer)
+>兼容网易云，同时 UI 美观，兼容性极强。记得切换播放引擎为 MPV。
+- 文件管理器、图片查看器等：使用系统默认，不再赘述。
+- 视频播放器：MPV
+>记得配 Profile，搭配 HDR 食用更佳。
+- 文本编辑器：Kate、Neo Vim、Obsidian
+>Neo Vim 使用的是一个一键美化包。Obsidian 作为 Marktext 的替代品，还是不错的。
+- 终端模拟器：Konsole
+>总体来说比 Kitty、Alacritty 等等更好。除了中文字体回退问题稍微麻烦一点，其他地方没有给我带来过任何困惑。
+- 屏幕捕获：Flameshot、OBS Studio
+>Flameshot 需要使用`flameshot gui -r | wl-copy`才能复制。
+OBS Studio 的快捷键可以通过安装一个插件来解决。
+- 游戏：XMCL
+>记得开原生 Wayland。
+- 远程桌面：RustDesk
+>由于沟槽的 Wayland 远程桌面竟然需要手动物理点同意，所以让 AI 写了[一个 patch](https://github.com/CreeperIsASpy/xdp-kde-nodialog) 绕过了 KDE 的这一机制，目前为止工作很正常。
+- 代理：v2rayN
+>建议开一次 GUI 配好配置之后就关掉，然后直接调用内置的 xray 内核作为一个 systemd 服务自启。
+>具体的方法我会单独出一个 blog。
+
+## 我对 KUbuntu 的评价
+经过了三次安装和一次更新，我自认为可以对 KUbuntu 进行一个完整的评价了。
+### 包管理器生态
+`apt`是目前 Linux 界最稳定的包管理器，但这是唯一的优点了。
+再要说的话，大多是 AI 叫你装包，都会先扔给你一串 `apt install`。
+依赖计算之缓慢我是亲身经历，但在这个极慢的网速下，这点延迟差不多可以忽略不计……Bug 我暂时还没碰到过。
+总体来说，作为一个一直能用的包管理器，`apt`我没意见。
+
+脱离开“包管理器”，后面的那个词“生态”也很重要。
+打开，比方说 QQ 的安装页面，可以看到三个选项：`deb`、`rpm`和`AppImage`。
+再打开一个我最近见到的软件，TurboWarp，可以看到 release 页面里有`amd64-deb`、`arm64-deb`、`arm64-AppImage`和`arm64-AppImage`——甚至没有`rpm`。
+再比方说 Obsidian：`AppImage`、`Snap`、`Deb`和`Flatpak`。
+提供`deb`算是“支持Linux”的第一步了。
+从生态来说，`dpkg`生态长盛不衰，很方便。
+
+### 稳定性与滚动节奏
+Ubuntu 的稳定性自不必说。虽然不及众不可变系统，亦或是`nixos`，但在众多主流桌面发行版里，其稳定性无疑牛逼。
+更新节奏方面，系统相关包的更新速度几乎使得其更新速度和 Windows 持平（尽管更新体验没那么烂），和 Arch 之流肯定没办法对比。
+不过，在今年五月份我执行 `sudo apt do-release-upgrade` 的体验相当不错：挂个 tmux，我人甚至不在家，就能通过 ssh 完成整个更新流程。
+给个 8/10 的分数。
+
+### 硬件兼容性
+我总共在两台电脑上安装了 KUbuntu，显卡分别是 3080 和 5090。
+<Collapse title="点击查看详细配置">
+```
+neclyon@1ST-Desktop
+-------------------
+OS: Kubuntu 26.04 LTS (Resolute Raccoon) x86_64
+Kernel: Linux 7.0.0-22-generic
+Uptime: 11 days, 12 mins
+Packages: 3168 (dpkg)
+Shell: fish 4.2.1
+Display (VG271U M): 2560x1440 in 27", 144 Hz [External, HDR]
+DE: KDE Plasma 6.6.4
+WM: KWin (Wayland)
+WM Theme: Materia-Dark
+Theme: Breeze (Dark) [Qt], Breeze-Dark [GTK2], Breeze [GTK3]
+Icons: Colloid-Purple-Dracula-Dark [Qt], Colloid-Purple-Dracula-Dark [GTK2/3/4]
+Font: Alibaba PuHuiTi 3.0 (10pt) [Qt], Alibaba PuHuiTi 3.0 (10pt) [GTK2/3/4]
+Cursor: SakayoriIroha (128px)
+Terminal: konsole 25.12.3
+Terminal Font: CaskaydiaCove Nerd Font (10pt)
+CPU: 12th Gen Intel(R) Core(TM) i5-12600KF (16) @ 4.90 GHz
+GPU: NVIDIA GeForce RTX 3080 12GB [Discrete]
+Memory: 11.58 GiB / 31.15 GiB (37%)
+Swap: 512.00 MiB / 512.00 MiB (100%)
+Disk (/): 68.38 GiB / 937.53 GiB (7%) - ext4
+Disk (/run/media/neclyon/System): 221.36 GiB / 465.65 GiB (48%) - ntfs3
+Local IP (enp5s0): 192.168.2.38/24
+Locale: en_US.UTF-8
+
+extinguisher@itx-03-linux
+-------------------------
+OS: Ubuntu 26.04 (Resolute Raccoon) x86_64
+Host: MS-7D73 (1.0)
+Kernel: Linux 7.0.0-14-generic
+Uptime: 1 hour, 43 mins
+Packages: 2439 (dpkg)
+Shell: fish 4.2.1
+Display (H27P6): 3840x2160 @ 1.7x in 27", 160 Hz [External, HDR]
+DE: KDE Plasma 6.6.4
+WM: KWin (Wayland)
+WM Theme: Breeze
+Theme: Breeze (Light) [Qt], Breeze-Dark [GTK2], Breeze [GTK3]
+Icons: Breeze [Qt], breeze-dark [GTK2/3/4]
+Font: Noto Sans (10pt) [Qt], Noto Sans (10pt) [GTK2/3/4]
+Terminal: /dev/pts/2
+CPU: AMD Ryzen 7 9700X (16) @ 5.58 GHz
+GPU 1: NVIDIA GeForce RTX 5090 [Discrete]
+GPU 2: AMD Radeon Graphics [Integrated]
+Memory: 2.99 GiB / 46.15 GiB (6%)
+Swap: 0 B / 512.00 MiB (0%)
+Disk (/): 12.86 GiB / 200.00 GiB (6%) - btrfs
+Local IP (wlp13s0): 192.168.2.11/24
+Locale: en_US.UTF-8
+```
+</Collapse>
+对于 N 卡 Linux 来说，KUbuntu 的兼容性相当不错（提一嘴，连 LinusTechTips 也用 KUbuntu，并且特地称赞了其显卡驱动兼容性）——直接自动安装了。
+不过，不晓得为什么，装的是闭源驱动，但是多执行一次`sudo apt install nvidia-driver-595-open`就解决了，没有什么后续问题。
+
+### 社区文档质量
+系统方面，Ubuntu 的资料多的数不胜数，并且也不会因为更新速度过快，导致资料快速过期。
+桌面环境方面，KDE 在 Reddit 和 Discord 上有极多的支持，没问题。
+
+### 桌面体验
+KDE 目前在 Wayland 下的体验不算糟糕，至于 KDE 本身，占用、花哨之类的老生常谈之外，根本无法挑出毛病，甚至完美到要用“不算那么好”来批评……
+
+### 安全策略
+在四、五月 Linux 内核集中暴露 CVE 后，Ubuntu 是最先推送新版本内核的发行版本之一。Ubuntu Security Team 的反应说不上很快，但也不算慢吞吞，总的来说积极跟进（毕竟，在一个非滚动发行版上，你急也没用）。
+在服务器领域备受好评，所以 Ubuntu 本身没啥问题。
+
+## 总体评价
+使用体验满分，但各项都是老二。
+在稳定性方面次于老大 Ubuntu，在滚动灵活性方面次于 Arch Linux ，在新手友好方面次于 Linux Mint，在游戏性能次于 Cachy OS。
+桌面上，美观度和工作效率次于 Niri，可复现性次于 Hyprland，简洁性次于 GNOME。
+但它无疑是最能让你拜托*搞机*状态的 Linux 发行版，毕竟电脑不是玩具，是你的工具。Linux 是拿来用的，不是拿来玩的。
