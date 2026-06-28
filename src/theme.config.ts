@@ -216,6 +216,14 @@ export default defineConfig({
         avatar: "https://gldym.github.io/img/icon.png",
         color: "var(--color-blue)"
       },
+      {
+        title: "游离域",
+        url: "https://yulliil.moe/blog/",
+        author: "Yulliil @ QQ",
+        logo: "https://yulliil.moe/blog/assets/logo.svg",
+        desc: "今日はうまく笑えたかな？"
+        color: "#173899"
+}
     ],
   },
   copyright: {
