@@ -220,9 +220,9 @@ export default defineConfig({
         title: "游离域",
         url: "https://yulliil.moe/blog/",
         author: "Yulliil @ QQ",
-        logo: "https://yulliil.moe/blog/assets/logo.svg",
+        logo: "https://yulliil.moe/blog/assets/yulliil.jpg",
         desc: "今日はうまく笑えたかな？",
-        color: "#173899"
+        color: "#A6B0E1"
       },
     ],
   },
